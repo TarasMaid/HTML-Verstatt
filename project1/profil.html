@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3b5998;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        .profile {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .profile h2 {
+            margin-top: 0;
+        }
+        .profile p {
+            margin-bottom: 10px;
+        }
+        /* Медіазапит для мобільних пристроїв */
+        @media (max-width: 600px) {
+            .profile img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        .post {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .post img {
+            width: 45%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>TestBook</h1>
+</header>
+<section>
+    <div class="profile">
+        <img src="Test.png" alt="Фото користувача">
+        <h2>User 1</h2>
+        <p>Email: user1@example.com</p>
+        <p>Дата народження: 01.01.1990</p>
+        <p>Місце проживання: Париж, Франція</p>
+        <p>Про себе:вивчав стародавні мови та знайшов загублену цивілізацію під час археологічних розкопок.</p>
+    </div>
+
+</section>
+<div class="post">
+    <img src="Test.png" alt="Берлін">
+    <h2>Моя поїздка до Берліну</h2>
+    <p>Безмежна краса та архітектурна витонченість! #Berlin #Deutschland</p>
+    <form action="#" method="post">
+        <input type="text" name="comment" placeholder="Напишіть коментар">
+        <input type="submit" value="Додати коментар">
+    </form>
+    <div class="comment">
+    </div>
+
+</div>
+
+<div class="post">
+    <img src="Test.png" alt="Фото заходу сонця">
+    <h2>Захід сонця на горі</h2>
+    <p>Магія природи! Неймовірний вечір на вершині гори. #Природа #Гори</p>
+    <form action="#" method="post">
+        <input type="text" name="comment" placeholder="Напишіть коментар">
+        <input type="submit" value="Додати коментар">
+    </form>
+    <div class="comment">
+    </div>
+
+</div>
+
+<div class="post">
+    <img src="Test.png" alt="Фото стародавнього письменства">
+    <h2>Нові знання</h2>
+    <p>Вивчаючи стародавні письмена, я знайшов таємницю минулого. #Археологія #Історія</p>
+    <form action="#" method="post">
+        <input type="text" name="comment" placeholder="Напишіть коментар">
+        <input type="submit" value="Додати коментар">
+    </form>
+    <div class="comment">
+    </div>
+
+</div>
+
+</body>
+</html>

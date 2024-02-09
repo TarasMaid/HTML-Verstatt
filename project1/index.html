@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #3b5998;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            background-color: #2d4373;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #3b5998;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .post {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .page{
+            color: #497bde;
+        }
+        .announcement {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        /* Media Query для телефонів */
+        @media (max-width: 600px) {
+            header {
+                font-size: 18px;
+            }
+            nav a {
+                display: block;
+                padding: 5px 0;
+            }
+        }
+        @media (max-width: 320px) and (max-height: 620px) {
+            .post img {
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>TestBook</h1>
+</header>
+<nav>
+    <a class ="page" href="index.html">Головна</a>
+    <a class ="page" href="profil.html">Мій профіль</a>
+    <a class ="page" href="Friends.html">Друзі</a>
+    <a class ="page" href="New.html">Новини</a>
+</nav>
+<section>
+    <h2>Новий допис</h2>
+    <form action="#" method="post">
+        <textarea name="post_content" cols="30" rows="5" placeholder="Напишіть свій допис
+(Тестовий варіант)"></textarea><br>
+        <input type="submit" value="Опублікувати">
+    </form>
+</section>
+<section>
+    <h2>Останні дописи</h2>
+    <div class="post">
+        <h3><a href="Adolf.html">Adolf</a></h3>
+        <img src="Test.png">
+        <p>Mein Sommer in Paris😙</p>
+        <form action="#" method="post">
+            <input type="text" name="comment" placeholder="Напишіть коментар">
+            <input type="submit" value="Додати коментар">
+        </form>
+        <div class="comment">
+        </div>
+    </div>
+</section>
+<footer>
+    &copy; TestBook 2024
+</footer>
+</body>
+</html>
