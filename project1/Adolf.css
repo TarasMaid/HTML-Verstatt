@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #3b5998;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+section {
+    padding: 20px;
+}
+.profile {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.profile h2 {
+    margin-top: 0;
+}
+.profile p {
+    margin-bottom: 10px;
+}
+.media {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.media img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+@media (max-width: 600px) {
+    .profile {
+        padding: 10px;
+    }
+    .profile img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 5px;
+    }
+    .profile h2 {
+        font-size: 20px;
+    }
+    .profile p {
+        font-size: 14px;
+    }
+    .media {
+        padding: 10px;
+    }
+    .media img {
+        margin-bottom: 5px;
+    }
+    .media h2 {
+        font-size: 20px;
+    }
+}
+nav {
+    background-color: #497bde;
+    padding: 10px;
+    text-align: center;
+}
+.page {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+.page:hover {
+    background-color: #555;
+}
+@media screen and (max-width: 600px) {
+    .page {
+        display: block;
+        margin: 5px auto;
+    }
+}
