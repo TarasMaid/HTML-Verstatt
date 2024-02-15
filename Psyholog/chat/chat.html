@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=""
+          content="">
+    <meta http-equiv="" content="">
+    <title>👶Щасливе Дитинство👶</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #eaa8f3;
+        }
+
+        .logo {
+
+            width: 80px;
+            height: 80px;
+            display: flex;
+            margin: 0 20px;
+
+        }
+
+        header {
+            background-color: #c53ee5;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #e690ef;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #bf61cb;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .page {
+            color: #497bde;
+        }
+
+
+        .f1 {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            height: 100%;
+            border: 1px solid black;
+
+        }
+
+        .f {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                font-size: 18px;
+            }
+
+            nav a {
+                display: block;
+                padding: 5px 0;
+            }
+        }
+
+        @media (max-width: 320px) and (max-height: 620px) {
+            .post img {
+                max-width: 300px;
+            }
+        }
+
+        .page {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-radius: 5px;
+        }
+
+        .page:hover {
+            background-color: #10e329;
+        }
+
+        /* CSS для чату */
+        .chat-box {
+            width: 80%;
+            max-width: 500px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .message-container {
+            overflow-y: scroll;
+            max-height: 300px;
+        }
+        .message {
+            background-color: #f4f4f4;
+            padding: 5px 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+        .message.sender {
+            background-color: #007bff;
+            color: white;
+            text-align: right;
+        }
+        #message-input {
+            width: calc(100% - 20px);
+            padding: 5px;
+            margin-top: 10px;
+        }
+        #send-button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .chat-box {
+            width: 80%;
+            max-width: 500px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .message-container {
+            overflow-y: scroll;
+            max-height: 300px;
+        }
+
+        .message {
+            background-color: #f4f4f4;
+            padding: 5px 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+        }
+
+        .message.sender {
+            background-color: #007bff;
+            color: white;
+            text-align: right;
+        }
+
+        #message-input {
+            width: calc(100% - 20px);
+            padding: 5px;
+            margin-top: 10px;
+        }
+
+        #send-button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            .chat-box {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .chat-box {
+                width: 95%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <img class="logo" src="Test.png">
+    <h1>👶Щасливе Дитинство👶</h1>
+
+</header>
+<nav>
+    <a class="page" href="/Psyholog/one/index.html">Інформаці для батьків👨👩</a>
+    <a class="page" href="/game/ninja.html">Цікаві Ігри для малюків🧸</a>
+    <a class="page" href="chat.html">Чат для обговорення📧</a>
+</nav>
+<div class="f1">
+    <img class="f" src="Test.png">
+    <p> Майданюк Інна Григорівна</p>
+    <img class="f" src="Test.png">
+    <p>ПІБ</p>
+</div>
+
+
+<div class="chat-box">
+    <div class="message-container" id="message-container"></div>
+    <input type="text" id="message-input" placeholder="Type your message...">
+    <button id="send-button">Send</button>
+</div>
+
+<a href="https://www.instagram.com/taaras.ikk/">
+    <footer>
+        &copy; Щасливе Дитинство
+    </footer>
+</a>
+
+<script>
+    const messageContainer = document.getElementById('message-container');
+    const messageInput = document.getElementById('message-input');
+    const sendButton = document.getElementById('send-button');
+
+    sendButton.addEventListener('click', () => {
+        const message = messageInput.value.trim();
+        if (message !== '') {
+            displayMessage(message, 'sender');
+            messageInput.value = '';
+        }
+    });
+
+    function displayMessage(message, type) {
+        const messageElement = document.createElement('div');
+        messageElement.textContent = message;
+        messageElement.classList.add('message', type);
+        messageContainer.appendChild(messageElement);
+        messageContainer.scrollTop = messageContainer.scrollHeight;
+    }
+</script>
+</body>
+</html>
