@@ -1,0 +1,295 @@
+body{
+    background: #424242;
+    margin: 10px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+
+#portfolio {
+    background-color: #1e1c1c;
+    padding: 80px 0;
+}
+
+#advantages {
+    padding: 80px 0;
+    background-color: #1e1c1c;
+}
+
+footer {
+    background-color: #424242;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffaa00;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ffcc00;
+}
+
+@media (max-width: 768px) {
+    .button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+
+.containers  {
+    max-width: 1200px;
+    margin: 10px;
+    padding: 0 20px;
+    background: #1e1c1c;
+    color: #938d8d;
+}
+
+.containers img{
+    height: 200px;
+    width: 200px;
+}
+
+
+
+.slideshow-container {
+
+    max-width: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.mySlides {
+    text-align: revert;
+    display: flex;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+
+
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.footer-column {
+    padding: 20px;
+    background-color: #424242;
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+.social-icons a{
+
+
+    color: #adaaaa;
+    text-decoration: none;
+}
+.footer-column nav ul {
+    list-style-type: none;
+}
+.footer-column nav ul li a {
+
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+@media (min-width: 1025px) {
+    .footer-columns {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+    .footer-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 768px) {
+    .footer-columns {
+        grid-template-columns: repeat(1, 1fr)
+    }
+}
+
+
+.header-right {
+    float: right;
+    margin-top: 20px;
+}
+
+.register-link {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-left: -104px;
+}
+
+.register-link:hover {
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    .header-right {
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .register-link {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header-right {
+        float: right;
+        margin-top: 20px;
+    }
+}
+
+#advantages, #contacts {
+    padding: 80px 0;
+    background-color: #1e1c1c;
+    color: #fff;
+    text-align: center;
+}
+
+#advantages ul {
+    list-style-type: none;
+}
+
+#advantages ul li {
+    margin-bottom: 10px;
+}
+
+#contacts form {
+    margin-top: 20px;
+}
+
+#contacts form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#contacts form input[type="text"],
+#contacts form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+}
+
+#contacts form input[type="submit"] {
+    background-color: #ffaa00;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contacts form input[type="submit"]:hover {
+    background-color: #ffcc00;
+}
+
+@media (min-width: 1025px) {
+    .header-right {
+        float: right;
+        margin-top: 20px;
+    }
+}
+@media (max-width: 768px) {
+    #advantages, #contacts {
+        padding: 50px 0;
+    }
+
+    #advantages h2, #contacts h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    #advantages, #contacts {
+        padding: 30px 0;
+    }
+
+    #advantages h2, #contacts h2 {
+        font-size: 20px;
+    }
+}
+#advantages .containers,
+#contacts .containers {
+    text-align: center;
+}
+
+.contact-form {
+    margin: 0 auto;
+    max-width: 400px;
+}
