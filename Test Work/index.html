@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор цитат</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        #quote {
+            margin-top: 50px;
+            font-size: 24px;
+        }
+        #author {
+            margin-top: 10px;
+            font-style: italic;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1>Генератор цитат</h1>
+<select id="category">
+    <option value="motivational" id="motivational">Мотиваційні</option>
+    <option value="philosophical" id="philosophical">Філософські</option>
+    <option value="humorous" id="humorous">Гумористичні</option>
+</select>
+<br><br>
+<div id="quote"></div>
+<div id="author"></div>
+<button onclick="generateQuote()" id="generate">Згенерувати цитату</button>
+
+<iframe id="quoteIframe" src="https://doc.clickup.com/36925455/p/h/136w0f-58802/2c5d002c981d8c4" width="100%" height="400px" frameborder="0"></iframe>
+
+<button onclick="changeLanguage('en')">English</button>
+<button onclick="changeLanguage('uk')">Українська</button>
+
+<script>
+    function generateQuote() {
+        var category = document.getElementById("category").value;
+        var quotes;
+
+        if (category === "motivational") {
+            quotes = [
+                { text: "Спробуйте не стати людиною успіху, а стати людиною цінності.", author: "Альберт Ейнштейн" },
+                { text: "Шлях до успіху - це не кінцева точка, це спосіб життя.", author: "Майкл Джордан" },
+                { text: "Тяга до мрії - це енергія, яку вона впроваджує в себе.", author: "Джон Асафф" }
+            ];
+        } else if (category === "philosophical") {
+            quotes = [
+                { text: "Мудрість починається в пізнанні своєї невідомості.", author: "Сократ" },
+                { text: "Життя - це те, що відбувається, коли ви зайняті іншими планами.", author: "Джон Леннон" },
+                { text: "Щасливий той, хто не має того, чого він не прагне.", author: "Демокріт" }
+            ];
+        } else if (category === "humorous") {
+            quotes = [
+                { text: "Я не боюся смерті, я просто не хочу бути там, коли це станеться.", author: "Вуді Аллен" },
+                { text: "Спробуйте не стати людиною успіху, а стати людиною цінності.", author: "Альберт Ейнштейн" },
+                { text: "Якщо ви хочете, щоб вчорашній день був цікавим, розповідайте про нього сьогодні.", author: "Марк Твен" }
+            ];
+        }
+
+        var randomIndex = Math.floor(Math.random() * quotes.length);
+        var quote = quotes[randomIndex];
+
+        document.getElementById("quote").innerHTML = quote.text;
+        document.getElementById("author").innerHTML = "- " + quote.author;
+
+        var iframe = document.getElementById("quoteIframe").contentWindow;
+        iframe.postMessage(quote, "*");
+    }
+
+    function changeLanguage(lang) {
+        var langText = {
+            'en': {
+                'title': 'Quote Generator',
+                'category': 'Category',
+                'motivational': 'Motivational',
+                'philosophical': 'Philosophical',
+                'humorous': 'Humorous',
+                'generate': 'Generate Quote'
+            },
+            'uk': {
+                'title': 'Генератор цитат',
+                'category': 'Категорія',
+                'motivational': 'Мотиваційні',
+                'philosophical': 'Філософські',
+                'humorous': 'Гумористичні',
+                'generate': 'Згенерувати цитату'
+            }
+        };
+
+        var currentLang = langText[lang];
+
+
+        document.title = currentLang.title;
+
+
+        document.getElementById('category').innerText = currentLang.category;
+        document.getElementById('motivational').innerText = currentLang.motivational;
+        document.getElementById('philosophical').innerText = currentLang.philosophical;
+        document.getElementById('humorous').innerText = currentLang.humorous;
+        document.getElementById('generate').innerText = currentLang.generate;
+    }
+</script>
+</body>
+</html>
