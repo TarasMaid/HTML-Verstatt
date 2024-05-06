@@ -1,0 +1,3 @@
+I've created a website with a generator of various quotes divided into three groups:
+Motivational, Philosophical, Humorous.
+Perhaps I misunderstood the task, so I apologize and will try to start over.
